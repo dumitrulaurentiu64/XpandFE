@@ -14,7 +14,7 @@
 <span> XPand</span>
 <span>
     <div *ngIf="authenticated; else loggedIn">
-        <a  routerLink="/login" class="nav-link">LOGOUT</a>
+        <a (click)="logout()" routerLink="/login" class="nav-link">LOGOUT</a>
     </div>
     
     <ng-template #loggedIn>

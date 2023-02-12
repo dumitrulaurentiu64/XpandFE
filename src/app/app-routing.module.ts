@@ -4,7 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { PlanetListComponent } from './planet-list/planet-list.component';
 
 const routes: Routes = [
-  {path: '**', component: LoginComponent},
+  {path: '', component: LoginComponent},
   {path: 'login', component: LoginComponent},
   {path: 'planets', component: PlanetListComponent},
 ];

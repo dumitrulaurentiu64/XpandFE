@@ -23,7 +23,9 @@ export class HeaderComponent {
   }
 
   logout(): void {
-    this.http.post(`${environment.authUrl}`, {}, {withCredentials: true})
+    
+    this.http.post(`${environment.logoutUrl}`, {}, {withCredentials: true})
       .subscribe(() => this.authenticated = false);
+    this.authenticated = false;
   }
 }
