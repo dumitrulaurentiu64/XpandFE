@@ -1,0 +1,36 @@
+<div class="planet">
+
+    <mat-card class="planet-card">
+
+        <mat-card-header>
+        <mat-card-title-group>
+            <mat-card-title><b>{{planet.planetName}}</b></mat-card-title>
+            <mat-card-title *ngIf="crew.crewName" class="visitedBy">Explored by team</mat-card-title>
+            <mat-card-title class="crew">{{crew.crewName}}</mat-card-title>
+            <img mat-card-lg-image src={{planet.imagePath}} >
+        </mat-card-title-group>
+        </mat-card-header>
+
+        <mat-card-content class="description">
+            "{{planet.planetDescription}}" <b>by captain</b> {{crew.captainFullname}}
+        </mat-card-content>
+
+        <mat-card-content *ngIf="robotList">
+            <b>Robots</b>: {{robotList}}
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button (click)="FunctionEdit(planet.planetID)" color="primary">Explore planet</button>
+            <mat-card-content *ngIf="planet.planetStatus == 1" class="status"s><p><b>Status: TODO</b></p></mat-card-content>
+            <mat-card-content *ngIf="planet.planetStatus == 2" class="status"><p><b>Status: En Route</b></p></mat-card-content>
+            <mat-card-content *ngIf="planet.planetStatus == 3" class="ok status"><p><b>Status: <em>OK</em></b></p></mat-card-content>
+            <mat-card-content *ngIf="planet.planetStatus == 4" class="notok status"><p><b>Status: <em>!OK</em></b></p></mat-card-content>
+        </mat-card-actions>
+
+        <mat-card-footer *ngIf="planet.planetStatus == 2">
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </mat-card-footer>
+
+  </mat-card>
+
+</div>

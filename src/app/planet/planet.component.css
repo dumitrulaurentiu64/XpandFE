@@ -1,0 +1,42 @@
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber';
+
+.planet-card {
+    background-color: #fafafa;
+    height: fit-content;
+    margin-bottom: 24px;
+  }
+
+.crew{
+    font-size: medium;
+}
+
+.visitedBy{
+    margin-top: 16px;
+    font-size: small;
+}
+
+.description {
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.status {
+    margin-left: 32px;
+    justify-content: center;
+}
+
+.status p {
+    padding-top: 18px;
+}
+
+.notok em {
+    color: red;
+    font-style:normal;
+}
+
+.ok em {
+    color: green;
+    font-style:normal;
+}
+

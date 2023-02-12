@@ -1,0 +1,42 @@
+<h1 mat-dialog-title>Planet</h1>
+<form [formGroup]="Reactiveform" (ngSubmit)="SavePlanet()">
+    <div mat-dialog-content>
+
+        <mat-form-field>
+            <mat-label>Planet ID</mat-label>
+            <input readonly placeholder="Planet ID" matInput formControlName="planetID">
+        </mat-form-field>
+
+        <mat-form-field [hidden]="true">
+            <mat-label>Captain ID</mat-label>
+            <input readonly placeholder="Captain ID" matInput formControlName="crewID">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Planet Name</mat-label>
+            <input readonly placeholder="Name" matInput formControlName="planetName">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Select a new status</mat-label>
+            <mat-select disableRipple matInput formControlName="planetStatus">
+                <mat-option value=1>TODO</mat-option>
+                <mat-option value=2>EnRoute</mat-option>
+                <mat-option value=3>OK</mat-option>
+                <mat-option value=4>!OK</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <input placeholder="Description" matInput formControlName="planetDescription">
+        </mat-form-field>
+
+        
+ 
+    </div>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+      <button type="submit" mat-raised-button color="primary" cdkFocusInitial>Save</button>
+    </div>
+</form>
